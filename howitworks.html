@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn simple steps to guaranteed profits with the Aviator Predictor App and choose the ideal plan for your needs.">
+    <title>Simple Steps to Guaranteed Profits</title>
+    <script src="https://kit.fontawesome.com/61107a0cf8.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .title {
+            font-size: 2em;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .step-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #ff0000;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .step-title {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .step-description {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.5;
+        }
+        .diagram {
+            color: #999;
+            font-size: 0.8em;
+            margin-top: 10px;
+        }
+        .learn-more {
+            margin-top: 30px;
+        }
+        .learn-more button {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .learn-more button:hover {
+            background-color: #cc0000;
+        }
+        .pricing-section {
+            text-align: center;
+            padding: 40px 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .pricing-section h1 {
+            font-size: 32px;
+            font-weight: 800;
+        }
+        .highlight {
+            color: #111;
+        }
+        .pricing-section .subtitle {
+            color: #888;
+            margin-bottom: 30px;
+        }
+        .plans-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .plan-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px 20px;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .plan-card h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .plan-card .desc {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .plan-card .price {
+            font-size: 32px;
+            color: red;
+            font-weight: 800;
+        }
+        .plan-card .trial {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+        .plan-card button {
+            background: #f8f8f8;
+            border: 1px solid #ccc;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .plan-card ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            font-size: 14px;
+            line-height: 1.8em;
+            color: #333;
+        }
+        .popular {
+            background: red;
+            color: #fff;
+        }
+        .popular .desc,
+        .popular .trial,
+        .popular ul li {
+            color: #fff;
+        }
+        .popular button {
+            background: #fff;
+            color: #000;
+            border: none;
+        }
+        .popular .badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #000;
+            color: #fff;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .contact-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.08);
+            max-width: 1100px;
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .contact-info {
+            background: #f40404;
+            color: white;
+            padding: 40px 30px;
+            flex: 1;
+            min-width: 250px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        .contact-info h4 {
+            font-weight: 300;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        .contact-info h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        .contact-info i {
+            margin-right: 10px;
+        }
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .info-item i {
+            font-size: 20px;
+            margin-top: 5px;
+            width: 30px;
+        }
+        .contact-form {
+            flex: 2;
+            padding: 40px 30px;
+            min-width: 250px;
+        }
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .full-width {
+            width: 100%;
+        }
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            background: transparent;
+            font-size: 14px;
+            resize: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .submit-btn {
+            margin-top: 10px;
+            background: #f40404;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .header {
+            background-color: #e63946;
+            width: 100%;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ccc;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .logo::before {
+            content: "✈";
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .pro {
+            background-color: #f1c40f;
+            color: black;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        .nav {
+            display: none; /* Hidden by default on small screens */
+            flex-direction: column;
+            background-color: #d3d3d3;
+            width: 100%;
+            padding: 10px 0;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            z-index: 1000;
+        }
+        .nav.active {
+            display: flex; /* Show when toggled */
+        }
+        .nav a, .nav button {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .nav a:hover, .nav button:hover {
+            background-color: #ccc;
+        }
+        .buy-now-h {
+            background-color: #2ecc71;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 10px auto;
+            display: block;
+        }
+        .menu-icon {
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            display: block;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 20px 40px;
+            font-family: Arial, sans-serif;
+            border-top: 5px solid #ff0000;
+            position: relative;
+            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-left, .footer-right {
+            flex: 1;
+        }
+        .footer-left p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .footer-left img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+        .footer-right ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-right ul li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .footer-right ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-right .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+        .footer-right .social-icons a {
+            color: #ffffff;
+            font-size: 24px;
+        }
+        .footer-right .social-icons a.whatsapp { color: green; }
+        .footer-right .social-icons a.linkedin { color: blue; }
+        .footer-right .social-icons a.twitter { color: rgb(4, 4, 70); }
+        .footer-right .social-icons a.github { color: rgb(55, 54, 54); }
+        .footer-bottom {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+        }
+        @media (max-width: 600px) {
+            .steps {
+                grid-template-columns: 1fr;
+            }
+            .step-card[style*="grid-column: span 2"] {
+                grid-column: span 1;
+            }
+            .plan-card {
+                width: 100%;
+                max-width: 100%;
+            }
+            .header-content .title {
+                color: white;
+                font-size: 20px;
+            }
+            .pro {
+                font-size: 10px;
+            }
+        }
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+            .contact-info {
+                border-radius: 15px 15px 0 0;
+                text-align: center;
+            }
+            .contact-form {
+                border-radius: 0 0 15px 15px;
+            }
+            .form-row {
+                flex-direction: column;
+            }
+            .form-group {
+                width: 100%;
+            }
+        }
+        @media (min-width: 769px) {
+            .header {
+                padding: 20px 40px;
+            }
+
+            
+            .nav {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                background-color: #d3d3d3;
+                width: auto;
+                justify-content: space-around;
+                align-items: center;
+                padding: 0 20px;
+            }
+            .menu-icon {
+                display: none;
+            }
+            .nav a, .nav button {
+                margin: 0 10px;
+            }
+            .buy-now-h {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <span class="logo"></span>
+            <span class="title">Aviator Predictor</span>
+            <span class="pro">PRO</span>
+        </div>
+        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="howitworks.html">How It Works</a>
+            <a href="index.html">Pricing</a>
+            <a href="faq.html">FAQ</a>
+            <a href="https://wa.me/254754534863">Contact</a>
+            <button class="buy-now-h" onclick="window.location.href='https://wa.me/254754534863'">Buy Now</button>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="title">Simple Steps to Guaranteed Profits</div>
+        <div class="subtitle">Follow these steps to successfully utilize the Aviator Predictor App and ensure daily profits.</div>
+        <div class="steps">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-title">Buy the App</div>
+                <div class="step-description">Acquire the Aviator Predictor App for your mobile device and finish the setup procedure.</div>
+                <div class="diagram">Step 1 Diagram</div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-title">Access the Aviator Game</div>
+                <div class="step-description">Start the Aviator game on your selected betting platform or app.</div>
+                <div class="diagram">Step 2 Diagram</div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-title">Receive Prediction Signals</div>
+                <div class="step-description">Utilize the Aviator Predictor App to obtain precise real-time signals for forthcoming flights.</div>
+                <div class="diagram">Step 3 Diagram</div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-title">Place Your Wager</div>
+                <div class="step-description">Bet according to the app's signals and withdraw at the suggested multiplier.</div>
+                <div class="diagram">Step 4 Diagram</div>
+            </div>
+            <div class="step-card" style="grid-column: span 2;">
+                <div class="step-number">5</div>
+                <div class="step-title">Reap Your Rewards</div>
+                <div class="step-description">With the Aviator Predictor App, you can reliably earn daily profits of at least 30,000 Pula.</div>
+                <div class="diagram">Final Step Diagram</div>
+            </div>
+        </div>
+        <div class="learn-more">
+            <button onclick="window.location.href='https://wa.me/254754534863'">Learn More <span>➡️</span></button>
+        </div>
+    </div>
+    <section class="pricing-section">
+        <h1>Select the ideal plan for your <span class="highlight">Aviator <br> Predictor Company</span></h1>
+        <p class="subtitle">Join countless aviators that trust us with their signal predictions</p>
+        <div class="plans-container">
+            <div class="plan-card">
+                <h2>Basic</h2>
+                <p class="desc">Enjoy a trial for 150P today for a 14-day free period. Cancel whenever. No pressure.</p>
+                <div class="price">150P</div>
+                <p class="trial">14 DAY FREE TRIAL</p>
+                <button onclick="window.location.href='https://wa.me/254754534863'">Select This Plan</button>
+                <ul>
+                    <li>✅ Daily Profit: 30,000</li>
+                    <li>✅ Signal Alerts</li>
+                    <li>✅ User-Friendly Interface</li>
+                    <li>✅ Lifetime Updates</li>
+                    <li>✅ 24/7 Customer Support</li>
+                </ul>
+            </div>
+            <div class="plan-card popular">
+                <div class="badge">MOST POPULAR</div>
+                <h2>Business</h2>
+                <p class="desc">Following your 14-Day Free Trial. Cancel whenever. No strings attached.</p>
+                <div class="price">150P</div>
+                <p class="trial">MONTHLY SUBSCRIPTION</p>
+                <button onclick="window.location.href='https://wa.me/254754534863'">Select This Plan</button>
+                <ul>
+                    <li>✅ Access to Premium Features</li>
+                    <li>✅ Daily Profit: 40,000</li>
+                    <li>✅ Personalized Support</li>
+                </ul>
+            </div>
+            <div class="plan-card">
+                <h2>Enterprise</h2>
+                <p class="desc">Start your trial today for just 150P with a 14-day free option. Cancel anytime.</p>
+                <div class="price">150P</div>
+                <p class="trial">14 DAY FREE TRIAL</p>
+                <button onclick="window.location.href='https://wa.me/254754534863'">Select This Plan</button>
+                <ul>
+                    <li>✅Unlimited Profit Potential</li>
+                    <li>✅ Exclusive Features</li>
+                    <li>✅ VIP Customer Support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h4>GET IN TOUCH</h4>
+                <h2><i class="fas fa-comment-dots"></i> We’d Love to<br> Hear From You</h2>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Our Office</strong><br>
+                        Nairobi, Kenya
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Contact Us Via Email</strong><br>
+                        info@aviatorpredictor.com
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <strong>Call Us</strong><br>
+                        +254754534863
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Your First Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Last Name</label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Your Email</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Phone Number</label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Your Message</label>
+                        <textarea rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">SEND YOUR MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <br><br><br>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="aviator-09.jpg" alt="Logo">
+                <p>The Aviator Predictor App allows you to receive signals before the plane flies away. With our app, profit is guaranteed—make at least $30,000 every day. The app costs just 150 Pula.</p>
+                <p>📞 +254754534863</p>
+                <p>📍 123 Real Lane, Gaborone, Botswana</p>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li><strong>Quick Links</strong></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="howitworks.html">How It Works</a></li>
+                    <li><a href="index.html">Pricing</a></li>
+                    <li><a href="reviews.html">Testimonials</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="https://wa.me/254754534863">Contact</a></li>
+                </ul>
+                <div class="social-icons" style="margin-right: 0px;">
+                    <a href="https://wa.me/254754534863" style="color: green; margin: 0 10px;">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" style="color: blue; margin: 0 10px;">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/" style="color: rgb(4, 4, 70); margin: 0 10px;">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://github.com/" style="color: rgb(55, 54, 54); margin: 0 10px;">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AVIATOR PREDICTOR COMPANY. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

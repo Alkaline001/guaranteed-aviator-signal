@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <script src="https://kit.fontawesome.com/61107a0cf8.js" crossorigin="anonymous"></script>
+    <style>
+        .faq-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            font-family: 'Segoe UI', sans-serif;
+            background: #f5f6f8;
+            text-align: center;
+        }
+        .faq-header .faq-btn {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-weight: 500;
+            cursor: default;
+            margin-bottom: 20px;
+        }
+        .faq-header h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .faq-header p {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        .faq-items {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+        }
+        .faq-item {
+            display: flex;
+            align-items: flex-start;
+            text-align: left;
+            gap: 20px;
+            width: 100%;
+        }
+        .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .red { background-color: red; }
+        .blue { background-color: #007bff; }
+        .yellow { background-color: #fcb900; }
+        .green { background-color: #28a745; }
+        .teal { background-color: #17a2b8; }
+        .faq-content h4 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: #000;
+        }
+        .faq-content p {
+            font-size: 14px;
+            color: #444;
+            margin: 0;
+        }
+        .highlight {
+            color: red;
+            font-weight: 600;
+        }
+        .aviator-faq-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            text-align: center;
+        }
+        .aviator-faq-section h2 {
+            color: #d32f2f;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .aviator-faq-section p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .aviator-faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+        .aviator-faq-card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .aviator-faq-card h3 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .aviator-faq-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 20px 40px;
+            font-family: Arial, sans-serif;
+            border-top: 5px solid #ff0000;
+            position: relative;
+            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .footer-left, .footer-right {
+            flex: 1;
+        }
+        .footer-left p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .footer-left img {
+            max-width: 100px;
+            margin-bottom: 10px;
+            width: 100%;
+            height: auto;
+        }
+        .footer-right ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-right ul li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .footer-right ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-right .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+        .footer-right .social-icons a {
+            color: #ffffff;
+            font-size: 24px;
+        }
+        .footer-right .social-icons a.whatsapp { color: green; }
+        .footer-right .social-icons a.linkedin { color: blue; }
+        .footer-right .social-icons a.twitter { color: rgb(4, 4, 70); }
+        .footer-right .social-icons a.github { color: rgb(55, 54, 54); }
+        .footer-bottom {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+        }
+        .earnings-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .earnings-faq-link {
+            color: #1da1f2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .earnings-title {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .earnings-subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .earnings-faq-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .earnings-faq-box h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 0 0 10px 0;
+        }
+        .earnings-faq-box p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+        .earnings-insights {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .earnings-insights h3 {
+            font-size: 20px;
+            margin: 0 0 10px 0;
+        }
+        .earnings-insights p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .earnings-progress-circle {
+            width: 60px;
+            height: 60px;
+            background: conic-gradient(#fff 0% 75%, #ff0000 75% 100%);
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            margin: 10px;
+        }
+        .earnings-progress-circle span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .earnings-explore-btn {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .earnings-explore-btn:hover {
+            background-color: #cc0000;
+        }
+        .header {
+            background-color: #e63946;
+            width: 100%;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ccc;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .logo::before {
+            content: "✈";
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .pro {
+            background-color: #f1c40f;
+            color: black;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        .nav {
+            display: none;
+            flex-direction: column;
+            background-color: #d3d3d3;
+            width: 100%;
+            padding: 10px 0;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            z-index: 1000;
+        }
+        .nav.active {
+            display: flex;
+        }
+        .nav a, .nav button {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .nav a:hover, .nav button:hover {
+            background-color: #ccc;
+        }
+        .buy-now {
+            background-color: #2ecc71;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 10px auto;
+            display: block;
+        }
+        .menu-icon {
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            display: block;
+        }
+        @media (max-width: 600px) {
+            .aviator-faq-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-left img {
+                max-width: 80px;
+            }
+            .header-content .title {
+                font-size: 20px;
+            }
+            .pro {
+                font-size: 10px;
+            }
+        }
+        @media (min-width: 769px) {
+            .header {
+                padding: 20px 40px;
+            }
+            .nav {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                background-color: #d3d3d3;
+                width: auto;
+                justify-content: space-around;
+                align-items: center;
+                padding: 0 20px;
+            }
+            .menu-icon {
+                display: none;
+            }
+            .nav a, .nav button {
+                margin: 0 10px;
+            }
+            .buy-now {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <span class="logo"></span>
+            <span class="title">Aviator Predictor</span>
+            <span class="pro">PRO</span>
+        </div>
+        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="howitworks.html">How It Works</a>
+            <a href="index.html">Pricing</a>
+            <a href="faq.html">FAQ</a>
+            <a href="https://wa.me/254754534863">Contact</a>
+            <button class="buy-now" onclick="window.location.href='https://wa.me/254754534863'">Buy Now</button>
+        </nav>
+    </header>
+    <section class="faq-section">
+        <div class="faq-header">
+            <button class="faq-btn">FAQ</button>
+            <h2>Your Questions, Answered</h2>
+            <p>Discover how the Aviator Predictor App can help you earn profitable returns by receiving timely signals before your plane stakes are placed.</p>
+        </div>
+        <div class="faq-items">
+            <div class="faq-item">
+                <div class="icon red"></div>
+                <div class="faq-content">
+                    <h4>How Does the Aviator Predictor App Work?</h4>
+                    <p>The Aviator Predictor App analyzes flight patterns and provides real-time signals to help you cash out before the plane flies away, ensuring guaranteed profits.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="icon blue"></div>
+                <div class="faq-content">
+                    <h4>How Much Can I Earn Daily?</h4>
+                    <p>With the Aviator Predictor App, users can earn profits of at least 30,000 Pula every day by following the provided signals.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="icon yellow"></div>
+                <div class="faq-content">
+                    <h4>Is There Any Other Fees?</h4>
+                    <p>No, the app costs 150 Pula as a one-time fee, giving you lifetime access without any hidden charges or additional fees.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="icon green"></div>
+                <div class="faq-content">
+                    <h4>Is My Information Secure?</h4>
+                    <p>Yes, we prioritize user privacy with advanced encryption to keep your information secure and confidential at all times.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="icon teal"></div>
+                <div class="faq-content">
+                    <h4>How Can I Contact Support?</h4>
+                    <p>For inquiries or assistance, you can reach our support team via WhatsApp at <span class="highlight">+254754534863</span> or Via Email: aviatorpredictorbwa@gmail.com available 24/7.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="aviator-faq-section">
+        <h2>Frequently Asked Questions About Aviator Predictor</h2>
+        <p>Get answers to commonly asked questions about how the Aviator Predictor App guarantees profits of at least 30,000 every day.</p>
+        <div class="aviator-faq-grid">
+            <div class="aviator-faq-card">
+                <h3>How much can I earn with the app?</h3>
+                <p>With the Aviator Predictor App, you can make at least 30,000 every day, maximizing your earning potential.</p>
+            </div>
+            <div class="aviator-faq-card">
+                <h3>What is the cost of the app?</h3>
+                <p>The app is priced at only 1500Ush, providing immense value for guaranteed profits.</p>
+            </div>
+            <div class="aviator-faq-card">
+                <h3>How do I receive signals?</h3>
+                <p>Signals are delivered to your device moments before the plane takes off, ensuring you can place your bets in time.</p>
+            </div>
+            <div class="aviator-faq-card">
+                <h3>Is there a support team available?</h3>
+                <p>Yes, our dedicated support team is available to assist you with any questions or issues you may have. You can reach us at <a href="+254754534863">+254754534863</a>.</p>
+            </div>
+            <div class="aviator-faq-card">
+                <h3>Can I trust the app for accuracy?</h3>
+                <p>We ensure that Predictor App is designed with high accuracy so you can rely on its predictions for profitable betting.</p>
+            </div>
+            <div class="aviator-faq-card">
+                <h3>How can I get started?</h3>
+                <p>Simply download the app, follow the setup instructions, and start receiving signals to improve your betting strategy.</p>
+            </div>
+        </div>
+    </section>
+    <section class="earnings-container">
+        <a href="#" class="earnings-faq-link">Frequently Asked Questions</a>
+        <h1 class="earnings-title">Understand Your Earning Potential</h1>
+        <p class="earnings-subtitle">Discover how the Aviator Predictor App guarantees profits through vital signals before the plane flies away.</p>
+        <div class="earnings-faq-box">
+            <h3>How much can I earn daily using the app?</h3>
+            <p>Users report earning at least 30,000 Pula daily by following precise signals provided by the Aviator Predictor App.</p>
+        </div>
+        <div class="earnings-faq-box">
+            <h3>How can I ensure my profits?</h3>
+            <p>The app provides guaranteed signals to maximize your earnings, leading to daily profits of at least 30,000 Pula.</p>
+        </div>
+        <div class="earnings-faq-box">
+            <h3>What do I need to get started?</h3>
+            <p>Purchase the app for 150 Pula and get access to our exclusive community for ongoing support and insights.</p>
+        </div>
+        <div class="earnings-faq-box">
+            <h3>Is the app suitable for beginners?</h3>
+            <p>Absolutely! The app is user-friendly, making it easy for both beginners and experienced users to profit.</p>
+        </div>
+        <div class="earnings-insights">
+            <h3>Daily Earnings Insights</h3>
+            <p>Average Daily Earnings</p>
+            <p>30,000 Pula</p>
+            <p>Percentage of users reaching daily earnings targets:</p>
+            <div class="earnings-progress-circle"><span>75%</span></div>
+        </div>
+        <button class="earnings-explore-btn">Explore More FAQs <span>></span></button>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="aviator-09.jpg" alt="Logo">
+                <p>The Aviator Predictor App allows you to receive signals before the plane flies away. With our app, profit is guaranteed—make at least $30,000 every day. The app costs just 150 Pula.</p>
+                <p>📞 +254754534863</p>
+                <p>📍 123 Real Lane, Gaborone, Botswana</p>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li><strong>Quick Links</strong></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="howitworks.html">How It Works</a></li>
+                    <li><a href="index.html">Pricing</a></li>
+                    <li><a href="reviews.html">Testimonials</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="https://wa.me/254754534863">Contact</a></li>
+                </ul>
+                <div class="social-icons" style="margin-right: 0px;">
+                    <a href="https://wa.me/254754534863" style="color: green; margin: 0 10px;">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" style="color: blue; margin: 0 10px;">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/" style="color: rgb(4, 4, 70); margin: 0 10px;">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://github.com/" style="color: rgb(55, 54, 54); margin: 0 10px;">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AVIATOR PREDICTOR COMPANY. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
